@@ -16,7 +16,7 @@ and click the button `load unpacked` to load the folder you just created by clon
 
 # How it works
 
-When enabled, it impeach new tabs to be openned until you disable it
+When enabled, it impeaches new tabs to be openned until you disable it
 (Useful for websites that open new tabs at every click)
 
 Note that the the last state persist in your chrome account, that means if the extension is enable in one computer<br>
