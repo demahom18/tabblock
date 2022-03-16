@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "version": "0.0.1",
     "name": "Tabblock",
-    "description": "Block the opening of intempestive and unwanted tabs on a website",
+    "description": "Block the opening of unwanted tabs on a website",
     "permissions": ["storage", "tabs","activeTab"],
     "background": {
         "service_worker": "background.js"
