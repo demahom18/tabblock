@@ -1,0 +1,14 @@
+
+html {
+    font-size: 10px;
+}
+
+.popup {
+    width: 15rem;
+    padding: .5rem 1.5rem;
+}
+
+.popup div {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
