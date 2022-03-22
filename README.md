@@ -10,7 +10,7 @@ You can clone it by typing
 ```bash
 git clone https://github.com/demahom18/tabblock.git
 ```
-In a Chrome browser, type `chrome://extensions` your address bar to go the extensions page then enable `developer mode` on the right corner 
+In a Chrome browser, type `chrome://extensions` in your address bar to go to the extensions page then enable `developer mode` on the right corner 
 and click the button `load unpacked` to load the folder you just created by cloning this repo and voilà!
 
 
