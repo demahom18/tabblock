@@ -23,7 +23,9 @@ function enableBlock(isEnabled) {
 
 // 
 function block({ id }) {
-    chrome.tabs.remove([id])
+    setTimeout(() => {
+        chrome.tabs.remove([id])
+    }, 100) 
 }
 
 async function getCurrentTab() {
