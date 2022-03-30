@@ -1,9 +1,7 @@
-const Storage = chrome.storage.sync
-
 window.addEventListener("click", notifyBackground);
 
 function notifyBackground() {
-    Storage.get('isEnabled', value => {
+    chrome.storage.sync.get('isEnabled', value => {
         
         if (value.isEnabled) {
             let request = chrome.runtime.sendMessage({

@@ -1,6 +1,4 @@
-const Storage = chrome.storage.sync
-
-Storage.get('isEnabled').then((data) => {
+chrome.storage.sync.get('isEnabled').then((data) => {
     enableBlock(data.isEnabled)
 })
 
