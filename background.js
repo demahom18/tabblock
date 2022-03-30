@@ -5,7 +5,13 @@ Storage.get('isEnabled').then((data) => {
 })
 
 chrome.storage.onChanged.addListener(onStorageChange)
+chrome.runtime.onMessage.addListener(onReceivedMessage);
 
+function onReceivedMessage(request, sender, sendResponse) {
+    enableBlock(request.block)
+    sendResponse({response: "done"});
+}
+  
 function onStorageChange (state) {
     isEnabled = state.isEnabled.newValue
     
@@ -21,15 +27,14 @@ function enableBlock(isEnabled) {
     }
 }
 
-// 
 function block({ id }) {
     setTimeout(() => {
         chrome.tabs.remove([id])
     }, 100) 
 }
 
-async function getCurrentTab() {
-    let queryOptions = { active: true, currentWindow: true };
-    let [tab] = await chrome.tabs.query(queryOptions);
-    return tab;
-}
+// async function getCurrentTab() {
+//     let queryOptions = { active: true, currentWindow: true };
+//     let [tab] = await chrome.tabs.query(queryOptions);
+//     return tab;
+// }
