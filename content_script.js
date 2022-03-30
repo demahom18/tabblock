@@ -13,8 +13,8 @@ function notifyBackground() {
     })
 }
 
-function onResponse(message) {
-    return message
+function onResponse() {
+    return
 }
   
 function onError(error) {

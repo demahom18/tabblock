@@ -7,7 +7,7 @@ chrome.runtime.onMessage.addListener(onReceivedMessage);
 
 function onReceivedMessage(request, sender, sendResponse) {
     enableBlock(request.block)
-    sendResponse({response: "done"});
+    sendResponse({});
 }
   
 function onStorageChange (state) {
