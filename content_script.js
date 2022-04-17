@@ -38,12 +38,14 @@ function onStorageChange(state) {
         iframe.style.top = 0
         iframe.style.margin = 0
         iframe.style.padding = 0
+        document.body.style.overflow = 'hidden'
     }
-
+    
     else {
         iframe.style.width = initialWidth + 'px'
         iframe.style.height = initialHeight + 'px'
         iframe.style.position = 'relative'
+        document.body.style.overflow = "auto"
     }
     
 }
