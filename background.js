@@ -6,14 +6,19 @@ chrome.storage.onChanged.addListener(onStorageChange)
 chrome.runtime.onMessage.addListener(onReceivedMessage);
 
 function onReceivedMessage(request, sender, sendResponse) {
-    enableBlock(request.block)
-    sendResponse({});
+  if (request.block) {
+        enableBlock(request.block)
+        sendResponse({ received: 'block' });
+    }
 }
   
 function onStorageChange (state) {
-    isEnabled = state.isEnabled.newValue
-    
-    enableBlock(isEnabled)
+
+    if (state.isEnabled && state.isEnabled.newValue) {
+
+        const isEnabled = state.isEnabled.newValue
+        enableBlock(isEnabled)
+    }
 }
 
 function enableBlock(isEnabled) {
